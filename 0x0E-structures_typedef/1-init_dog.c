@@ -5,8 +5,9 @@
  * @d: pointer to an element of type dog
  * @name: pointer to a char for name of dog
  * @age: age of dog
+ * Description: variable initializer
  * @owner: pointer to a char for owner of dog
- * Return: nothing
+ * Return: NULL
  **/
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
