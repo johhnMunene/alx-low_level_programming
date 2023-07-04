@@ -1,20 +1,21 @@
-#include "function_pointers.h"
-#include <stdlib.h>
+#include "lists.h"
 /**
- * array_iterator - iterates an array
- * @array: is an array
- * @size: is the size
- * @action: is something
+* listint_len - a function that returns the number
+*  of elements in a linked listint_t list
+* @h: input
+* Return: 0
 */
-void array_iterator(int *array, size_t size, void (*action)(int))
+size_t listint_len(const listint_t *h)
 {
-	unsigned int i;
+	int len = 0;
 
-	if (array == NULL)
-		return;
-	if (action == NULL)
-		return;
+	if (h == NULL)
+		return (0);
 
-	for (i = 0; i < size; i++)
-		action(array[i]);
+	while (h != NULL)
+	{
+		len++;
+		h = h->next;
+	}
+	return (len);
 }
